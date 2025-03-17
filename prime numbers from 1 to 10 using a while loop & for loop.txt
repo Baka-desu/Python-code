@@ -1,0 +1,22 @@
+while loop
+num = 2 # Start from the first prime number
+print("Prime numbers from 1 to 10 using while loop:")
+while num <= 10:
+is_prime = True
+for i in range(2, num):
+if num % i == 0:
+is_prime = False
+break
+if is_prime:
+print(num, end=" ")
+num += 1
+print("\nPrime numbers from 1 to 10 using for loop:")
+for num in range(2, 11):
+is_prime = True
+for i in range(2, num):
+if num % i == 0:
+is_prime = False
+
+break
+if is_prime:
+print(num, end=" ")

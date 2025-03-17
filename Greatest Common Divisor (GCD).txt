@@ -1,0 +1,3 @@
+a = 56
+b = 98
+print(f"GCD of {a} and {b}:", math.gcd(a, b))
