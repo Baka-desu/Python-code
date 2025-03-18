@@ -1,0 +1,23 @@
+def is_valid_move(sticks, move):
+if move in [1, 2, 3] and move <= sticks:
+return True
+return False
+def play_game():
+sticks = 16
+current_player = 1 # Player 1 starts
+print("Welcome to the Sticks Game!")
+print("There are 16 sticks initially.")
+while sticks > 0:
+print(f"\nThere are {sticks} sticks left.")
+move = int(input(f"Player {current_player}, how many sticks would you like to take
+(1, 2, or 3)? "))
+if not is_valid_move(sticks, move):
+print("Invalid move. You can only take 1, 2, or 3 sticks, and not more than the
+remaining sticks.")
+continue
+sticks -= move
+if sticks == 0:
+print(f"\nPlayer {current_player} took the last stick and lost!")
+break
+current_player = 2 if current_player == 1 else 1
+play_game()

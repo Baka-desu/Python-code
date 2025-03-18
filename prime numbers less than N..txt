@@ -1,0 +1,12 @@
+def is_prime(num):
+if num <= 1: # Numbers less than or equal to 1 are not prime
+return False
+for i in range(2, int(num**0.5) + 1): # Check divisibility up to the square root of num
+if num % i == 0:
+return False
+return True
+N = int(input("Enter a number (N): "))
+print(f"Prime numbers less than {N}:")
+for number in range(2, N): # Start from 2 as 1 is not a prime number
+if is_prime(number):
+print(number, end=" ")

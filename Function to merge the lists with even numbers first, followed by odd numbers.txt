@@ -1,0 +1,17 @@
+def merge_sorted_lists(list1, list2):
+merged_list = list1 + list2
+even_numbers = [num for num in merged_list if num % 2 == 0]
+odd_numbers = [num for num in merged_list if num % 2 != 0]
+even_numbers.sort()
+odd_numbers.sort()
+result = even_numbers + odd_numbers
+return result
+def main():
+list1 = list(map(int, input("Enter the first list of numbers (separated by spaces):
+").split()))
+list2 = list(map(int, input("Enter the second list of numbers (separated by spaces):
+").split()))
+merged_list = merge_sorted_lists(list1, list2)
+print("Merged list with even numbers first and odd numbers second (sorted):")
+print(merged_list)
+main()

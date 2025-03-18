@@ -1,0 +1,13 @@
+def gcd(a, b):
+if b == 0: # Base case: if b is 0, GCD is a
+return a
+else:
+return gcd(b, a % b) # Recursively call gcd with b and the remainder of a divided by
+b
+num1 = int(input("Enter the first positive number: "))
+num2 = int(input("Enter the second positive number: "))
+if num1 <= 0 or num2 <= 0:
+print("Both numbers must be positive.")
+else:
+result = gcd(num1, num2)
+print(f"The GCD of {num1} and {num2} is: {result}")

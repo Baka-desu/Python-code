@@ -1,0 +1,21 @@
+# Step 1: Create a NumPy array
+print("Step 1: Creating a NumPy array")
+array = np.array([10, 20, 30, 40, 50])
+print("Original array:", array)
+# Step 2: Append elements to the array
+print("\nStep 2: Appending elements to the array")
+array = np.append(array, [60, 70, 80]) # Appending elements
+print("Array after appending:", array)
+# Step 3: Remove elements from the array
+print("\nStep 3: Removing elements from the array")
+# Removing the element at index 2
+array = np.delete(array, 2)
+print("Array after removing element at index 2:", array)
+# Removing elements by value
+value_to_remove = 40
+indices_to_remove = np.where(array == value_to_remove)
+array = np.delete(array, indices_to_remove)
+print("Array after removing value 40:", array)
+# Step 4: Working with dynamic lists using NumPy arrays
+print("\nFinal state of the array:", array)
+
